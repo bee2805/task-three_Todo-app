@@ -5,7 +5,7 @@
 .item{
     padding: 15px 20px;
     width: 20%;
-    background-color: rgb(216, 165, 216);
+    background-color: white;
     display: flex;
     flex: content;
     justify-content:space-between;
