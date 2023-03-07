@@ -1,0 +1,18 @@
+<div class="todos">
+    <form>
+        <mat-form-field color="primary">
+            <mat-label>Enter todo...</mat-label>
+            <input matInput type="text" name="inputTodo" placeholder="Eg. Exercise" class="todo-input" [(ngModel)]="inputTodo">
+        </mat-form-field>
+    </form>
+</div>
+
+<button mat-raised-button color="primary" class="add-btn" (click)="addTodo()">Add Todo</button>
+
+<div class="todos" *ngFor="let todo of todos; let i = index;" class="todo {{ (todo.completed ? 'done' : '') }}">
+    <div  class="item">
+        <div class="id">{{ i }}</div>
+        <div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
+        <button class="delete" mat-raised-button color="primary" (click)="deleteTodo(i)">Remove</button>
+    </div>
+</div>
